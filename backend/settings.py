@@ -131,4 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from backend.localsettings import *
 except ImportError:
-    pass
+    #TODO: it should 
+    raise ImportError(
+        "You need to create a localsettings.py file next to settings.py, in \
+the backend folder, with at least a SECRET_KEY."
+    )
